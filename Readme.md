@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алексей Гулынин](https://up.htmlacademy.ru/htmlcss/19/user/423111).
-* Наставник: Илья Туров.
+* Наставник: [Илья Туров](https://htmlacademy.ru/profile/turov). 
 
 ---
 
