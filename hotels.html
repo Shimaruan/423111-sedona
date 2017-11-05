@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class= "wrapper">
+    <div class= "hotels-header">
     <nav class= "main-navigation">
       <a class= "main-header-logo" href= "index.html" >
         <img src= "mainlogo.png" alt= "логотип" width= "100" height= "100">
@@ -18,69 +19,77 @@
       </ul>
     </nav>
 
-    <header class= "hotels-header">
+
       <h1 class= "visually-hidden">Поиск гостиниц</h1>
       <form class= "hotels-filter">
         <!--Здесь будет форма-->
       </form>
-    </header>
+    </div>
 
-    <main class="container-hotels">
+    <main class="hotels">
       <section class= "hotels-sort">
         <h2 class= "visually-hidden">Сортировка результатов</h2>
         <p>
           <b>Найдено:
             <!--Будущий интерактивный элемент-->
-            3
+            <span>3</span>
           </b>
         </p>
 
-        <ul class= "hotels-sort-list">
-          <li><!--Будущий интерактивный элемент--><span>По цене</span></li>
-          <li><!--Будущий интерактивный элемент--><span>По типу</span></li>
-          <li><!--Будущий интерактивный элемент--><span>По рейтингу</span></li>
+        <ul class= "hotels-sort-properties">
+          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По цене</span></a></li>
+          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По типу</span></a></li>
+          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По рейтингу</span></a></li>
+        </ul>
+
+        <ul class= "hotels-sort-arrows">
+          <li><!--Будущий интерактивный элемент--><a href= "#"><span>стрелочка вверх</span></a></li>
+          <li><!--Будущий интерактивный элемент--><a href= "#"><span>стрелочка вниз</span></a></li>
+
         </ul>
       </section>
 
-      <section class= "search-result">
-       <h2 class= "visually-hidden">Результаты поиска гостиниц</h2>
-        <figure>
+      <div class= "hotels-found">
+        <figure class= "search-item">
           <a href="#"><img src= "hotel.jpg" alt= "фото гостиницы" width= "100" height= "100"></a>
-          <h3>Amara resort & spa</h3>
-          <p>Гостиница  от 4000р.</p>
-          <a class= "btn btn-details" href= "#">Подробнее</a>
-          <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
-          <figcaption>
-            <img src= "raiting.png" alt= "4 звезды" width= "50" height= "50">
-            <p>Рейтинг:8,5</p>
+          <figcaption class= "item-info">
+            <h3>Amara resort & spa</h3>
+            <p>Гостиница  от 4000р.</p>
+            <a class= "btn btn-details" href= "#">Подробнее</a>
+            <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
           </figcaption>
+          <div class= "item-info">
+            <span>Рейтинг:8,5</span>
+          </div>
         </figure>
 
-        <figure>
+        <figure class= "search-item">
           <a href="#"><img src= "hotel.jpg" alt= "фото мотеля" width= "100" height= "100"></a>
-          <h3>Desert quail inn</h3>
-          <p>Мотель  от 3000р.</p>
-          <a class= "btn btn-details" href= "#">Подробнее</a>
-          <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
-          <figcaption>
-            <img src= "raiting.png" alt= "3 звезды" width= "50" height= "50">
-            <p>Рейтинг:8,9</p>
+          <figcaption class= "item-info">
+            <h3>Desert quail inn</h3>
+            <p>Мотель  от 3000р.</p>
+            <a class= "btn btn-details" href= "#">Подробнее</a>
+            <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
           </figcaption>
+          <div class= "item-info">
+            <span>Рейтинг:8,9</span>
+          </div>
         </figure>
 
-        <figure>
+        <figure class= "search-item">
           <a href="#"><img src= "hotel.jpg" alt= "фото аппартаментов" width= "100" height= "100"></a>
-          <h3>Villas at Poco Diablo</h3>
-          <p>Аппартаменты  от 2000р.</p>
-          <a class= "btn btn-details" href= "#">Подробнее</a>
-          <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
-          <figcaption>
-            <img src= "raiting.png" alt= "2 звезды" width= "50" height= "50">
-            <p>Рейтинг:9,2</p>
+          <figcaption class= "item-info">
+            <h3>Villas at Poco Diablo</h3>
+            <p>Аппартаменты  от 2000р.</p>
+            <a class= "btn btn-details" href= "#">Подробнее</a>
+            <a class= "btn btn-reserve-it" href= "#">Забронировать</a>
           </figcaption>
+          <div class= "item-info">
+            <span>Рейтинг:9,2</span>
+          </div>
         </figure>
 
-      </section>
+      </div>
 
     </main>
 
