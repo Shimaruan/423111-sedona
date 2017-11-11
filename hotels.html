@@ -23,8 +23,42 @@
 
 
       <h1 class= "visually-hidden">Поиск гостиниц</h1>
-      <form class= "hotels-filter">
-        <!--Здесь будет форма-->
+      <form class= "hotels-filter" id= "hotels-filter-id" method= "post" action= "http://echo.htmlacademy.ru">
+        <span>Инфраструктура:</span>
+        <fieldset class = "hotels-filter-infrastructure">
+          <legend class ="visually-hidden">Инфраструктура в наличии</legend>
+            <label>
+            <input type="checkbox" name= "infrastructure-pool">
+            Бассейн</label>
+            <label>
+            <input type="checkbox" name= "infrastructure-parking">
+            Парковка</label>
+            <label>
+            <input type="checkbox" name= "infrastructure-wifi">
+            WI-FI</label>
+        </fieldset>
+
+        <span>Тип жилья:</span>
+        <fieldset class = "hotels-filter-housing">
+          <legend class ="visually-hidden">Тип жилья</legend>
+            <label>
+            <input type="checkbox" name= "housing-hotel">
+            Гостиница</label>
+            <label>
+            <input type="checkbox" name= "housing-motel">
+            Мотель</label>
+            <label>
+            <input type="checkbox" name= "housing-apartments">
+            Апартаменты</label>
+        </fieldset>
+
+        <span>Стоимость в сутки(Р):</span>
+        <fieldset class= "hotels-filter-price">
+
+        </fieldset>
+
+        <button class= "btn hotels-filter-btn" type= "submit">Показать</button>
+
       </form>
     </div>
 
@@ -33,20 +67,19 @@
         <h2 class= "visually-hidden">Сортировка результатов</h2>
         <p>
           <b>Найдено:
-            <!--Будущий интерактивный элемент-->
-            <span>3</span>
+            <output name="hotels-filter-found" form= "hotels-filter-id">3</output>
           </b>
         </p>
 
         <ul class= "hotels-sort-properties">
-          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По цене</span></a></li>
-          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По типу</span></a></li>
-          <li><!--Будущий интерактивный элемент--><a href= "#"><span>По рейтингу</span></a></li>
+          <li><button class= "hotels-sort-properties-btn" type= "button">По цене</button></li>
+          <li><button class= "hotels-sort-properties-btn" type= "button">По типу</button></li>
+          <li><button class= "hotels-sort-properties-btn" type= "button">По рейтингу</button></li>
         </ul>
 
         <ul class= "hotels-sort-arrows">
-          <li><!--Будущий интерактивный элемент--><a href= "#"><span>стрелочка вверх</span></a></li>
-          <li><!--Будущий интерактивный элемент--><a href= "#"><span>стрелочка вниз</span></a></li>
+          <li><button class= "hotels-sort-arrows-btn" type= "button">стрелочка вверх</button></li>
+          <li><button class= "hotels-sort-arrows-btn" type= "button">стрелочка внизM</button></li>
 
         </ul>
       </section>
