@@ -1,3 +1,41 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2"), url("../fonts/ptsans.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2"), url("../fonts/ptsansbold.woff");
+  font-weight: bold;
+}
+
+body {
+  width: 100%;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 40px 2px #dbdbdb;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -5,4 +43,368 @@
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+/*-----------index.html------------- */
+.site-navigation,
+.reasons-list,
+.reason-features-list,
+.sort-properties,
+.sort-arrows,
+.rate-star,
+.footer-social {
+  list-style: none;
+}
+
+.site-navigation {
+  background-color: #ffffff;
+}
+
+.site-navigation a {
+  font-weight: bold;
+  line-height: 26px;
+  color: #000000;
+}
+
+.site-navigation a.current {
+  color: #766357;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+.intro {
+  width: 1200px;
+  height: 773px;
+
+  background-color: #81b3d2 ;
+  background-image:url(../img/intro-bg-fonts.png), url(../img/intro-bg-bottomline.png), url(../img/intro-bg.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center 135px, bottom, bottom;
+}
+
+.advantages h1 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.advantages p {
+  line-height: 26px;
+}
+
+.reason-description {
+  background-color: #81b3d2;
+}
+
+.reason-description h2,
+.reason-description p {
+  color: #ffffff;
+}
+
+.reasons-container h2,
+.reason-description h2,
+.item-reason h2{
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.item-feature b {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.item-feature p {
+  color: #333333;
+}
+
+.item-feature b::before {
+  /* Требуется помощь */
+  content: "";
+
+  background-image: url(../img/icon-1.svg)
+
+}
+
+.item-reason-bottom p {
+  color: #333333;
+}
+
+.item-reason-bottom {
+  background-color: #eeeeee;
+}
+
+.service b {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.service p {
+  line-height: 24px;
+  color: #333333;
+}
+
+.btn-service {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.btn-service:hover {
+  background-color: #604e43;
+}
+
+.btn-service:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.search-field label {
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.search-field input {
+  background-color: #f2f2f2;
+}
+
+.search-field input:hover {
+  background-color: #ebebeb;
+}
+
+.search-field input:focus {
+  background-color: #ffffff;
+}
+
+.search-control .calendar-btn-icon {
+  fill: #cacaca;
+}
+
+.search-control .calendar-btn-icon:hover {
+  fill: #000000;
+}
+
+.search-control .calendar-btn-icon:active {
+  fill: #81b3d2;
+}
+
+/* Место для стилей кнопок минус плюс */
+
+.search-btn {
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.search-btn:hover {
+  background-color: #669ec0;
+}
+
+.search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.main-footer p {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.main-footer b {
+  line-height: 26px;
+}
+
+.footer-social .social-icon {
+  fill: #ffffff;
+ }
+
+.footer-social li {
+  background-color: #81b3d2;
+ }
+
+ .footer-social .social-btn:hover {
+  background-color: #669ec0;
+ }
+
+ .footer-social .social-btn:active {
+  background-color: #5496bd;
+ }
+
+ .footer-social .social-icon:active {
+  fill: rgba(255, 255, 255, 0.3);
+ }
+
+
+ .academy-icon {
+  fill: #231f20;
+}
+
+ .academy-icon:hover {
+  fill: #81b3d2;
+ }
+
+.academy-icon:active {
+  fill: #bdbbbc;
+ }
+
+/*------------------hotels.html-----------------------*/
+
+.hotels-filter  legend {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.hotels-filter input[type= "checkbox"]:disabled + label {
+  background-color: #6a6a6a;
+}
+
+.filter-container {
+  background-color: #81b3d2;
+  background-image: url(../img/filter-hotel-bg.jpg);
+}
+
+.filter-container label {
+  color: #ffffff;
+}
+
+.hotels-filter fieldset {
+  border: none;
+}
+
+.filter-btn {
+  font: inherit;
+  color: #ffffff;
+}
+
+.sort b,
+.sort output {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sort-properties span {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort-properties .sort-btn {
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba( 0, 0, 0, 0.3);
+}
+
+.sort-properties .sort-btn.current {
+  color: #81b3d2;
+}
+
+.sort-properties .sort-btn:hover {
+  color: #81b3d2;
+}
+
+.sort-properties .sort-btn:active {
+  color: #000000;
+}
+
+.sort-arrows .arrows-btn-icon {
+  fill: #cacaca;
+}
+
+.sort-arrows svg.current {
+  fill: #81b3d2;
+}
+
+.sort-arrows .arrows-btn-icon:hover {
+  fill: #000000;
+}
+.sort-arrows.arrows-btn-icon:active {
+  fill: #81b3d2;
+}
+
+.search-item a{
+  color: #000000;
+}
+
+.search-item a:hover {
+  color: #81b3d2;
+}
+
+.search-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-item h3 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+1.search-item h3:hover {
+  background-color: #81b3d2;
+}
+
+1.search-item h3:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.search-item p {
+  color: #333333;
+}
+
+.item-info .btn {
+  font: inherit;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-details {
+  background-color: #81b3d2;
+}
+
+.item-info .btn-details:hover {
+  background-color: #669ec0;
+}
+
+.item-info .btn-details:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.btn-reserve-it {
+  background-color: #766357;
+}
+
+.item-info .btn-reserve-it:hover {
+  background-color: #604e43;
+}
+
+.item-info .btn-reserve-it:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.item-rate span {
+  color: #666666;
+
+  background: #f2f2f2;
 }
