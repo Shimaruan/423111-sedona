@@ -54,7 +54,7 @@ img {
 .rate-star,
 .footer-social {
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 
 .site-navigation {
@@ -159,7 +159,7 @@ img {
 
   background-color: #766357;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .btn-service:hover {
@@ -316,7 +316,7 @@ img {
 
   background: none;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .sort-properties .sort-btn.current {
@@ -334,7 +334,7 @@ img {
 .sort-arrows .arrows-btn {
   background: none;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .sort-arrows .arrows-btn-icon {
