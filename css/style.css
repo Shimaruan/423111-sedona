@@ -54,6 +54,7 @@ img {
 .rate-star,
 .footer-social {
   list-style: none;
+  padding: 0px;
 }
 
 .site-navigation {
@@ -66,7 +67,7 @@ img {
   color: #000000;
 }
 
-.site-navigation a.current {
+.site-navigation .current {
   color: #766357;
 }
 
@@ -157,6 +158,8 @@ img {
   color: #ffffff;
 
   background-color: #766357;
+  border: none;
+  border-radius: 0px;
 }
 
 .btn-service:hover {
@@ -310,6 +313,10 @@ img {
   font-size: 12px;
   line-height: 18px;
   color: rgba( 0, 0, 0, 0.3);
+
+  background: none;
+  border: none;
+  border-radius: 0px;
 }
 
 .sort-properties .sort-btn.current {
@@ -324,8 +331,15 @@ img {
   color: #000000;
 }
 
+.sort-arrows .arrows-btn {
+  background: none;
+  border: none;
+  border-radius: 0px;
+}
+
 .sort-arrows .arrows-btn-icon {
   fill: #cacaca;
+
 }
 
 .sort-arrows svg.current {
