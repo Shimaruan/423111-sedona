@@ -79,13 +79,26 @@ img {
 
 .site-navigation {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 1056px;
   min-height: 56px;
   margin: auto;
 
   background-color: #ffffff;
+}
+
+.site-navigation li {
+  margin: auto 0;
+  margin-right: 147px;
+}
+
+.site-navigation li:nth-child(2) {
+  margin: auto 0;
+  margin-right: 389px;
+}
+
+.site-navigation li:last-child {
+  margin: auto 0;
+  margin-left: auto;
 }
 
 .site-navigation a {
@@ -108,18 +121,18 @@ img {
 
 .intro {
   width: 1200px;
-  height: 773px;
+  height: 508px;
 
   background-color: #81b3d2 ;
   background-image:url(../img/intro-bg-fonts.png), url(../img/intro-bg-bottomline.png), url(../img/intro-bg.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center 135px, bottom, bottom;
+  background-position: center 76px, bottom, bottom;
 }
 
 .advantages {
   width: 576px;
-  padding-top: 59px;
-  padding-bottom: 59px;
+  padding-top: 60px;
+  padding-bottom: 51px;
   margin: 0 auto;
 
   text-align: center;
@@ -127,10 +140,11 @@ img {
 
 .advantages h1 {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   font-weight: bold;
   font-size: 21px;
+  line-height: 26px;
 }
 
 .advantages p {
@@ -142,11 +156,6 @@ img {
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.reason-features-list .item-feature {
-  width: 400px;
-  min-height: 330px;
 }
 
 .item-reason {
@@ -172,60 +181,96 @@ img {
   display: block;
 }
 
-.reason-features-list {
-  display: flex;
-
-  background-color: #ffffff;
-}
-
 .reason-description {
   text-align: center;
 }
 
+.reason-description h2,
+.item-reason h2{
+  margin: 0;
+  margin-top: 47px;
+  margin-bottom: 24px;
+  padding: 0 100px;
+
+
+  font-weight: bold;
+  font-size: 21px;
+  color: #ffffff;
+}
+
 .reason-description p {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   color: #ffffff;
 }
 
 .reason-description p:nth-child(3) {
   margin: 0;
+  padding: 0 60px;
+
+  letter-spacing: 0.2px;
 }
 
-.reasons-container h2,
-.reason-description h2,
-.item-reason h2{
-  margin: 0;
-  margin-top: 50px;
-  margin-bottom: 25px;
+.reason-features-list {
+  display: flex;
 
-
-  font-weight: bold;
-  font-size: 21px;
-  color: #ffffff;
+  background-color: #ffffff;
 }
 
-.item-reason h2 {
-  color: #000000;
+.reason-features-list .item-feature {
+  display: block;
+  width: 400px;
+  min-height: 330px;
+  text-align: center;
 }
 
 .item-feature b {
+  position: relative;
+
+  display: block;
   margin: 0;
+  margin-top: 161px;
+  margin-bottom: 24px;
 
   font-weight: bold;
   font-size: 21px;
 }
 
-.item-feature p {
-  color: #333333;
+.item-feature b::before {
+  content: " ";
+  position: absolute;
+  top: -103px;
+  left: 162px;
+
+  width: 75px;
+  height: 75px;
+
+
+  background-image: url(../img/icon-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.item-feature b::before {
-  /*-----------------------настроить отображение псевдоэлемента------------ */
-  content: "";
+li.item-feature:nth-child(2)  b::before {
+  left: 160px;
 
-  background-image: url(../img/icon-1.svg)
+  background-image: url(../img/icon-3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+li.item-feature:nth-child(3)  b::before {
+  background-image: url(../img/icon-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-feature p {
+  margin: 0;
+  padding: 0 50px;
+
+  color: #333333;
 }
 
 .item-reason-bottom {
@@ -234,6 +279,18 @@ img {
   min-height: 256px;
 
   text-align: center;
+}
+
+.item-reason-bottom h2{
+  margin: 0;
+  margin-top: 47px;
+  margin-bottom: 24px;
+  padding: 0 130px;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
 }
 
 .item-reason-bottom p {
@@ -353,6 +410,10 @@ img {
   min-height: 593px;
 }
 
+.footer-index {
+  margin-top: -100px;
+}
+
 .main-footer{
   display: flex;
   justify-content: space-around;
@@ -389,6 +450,17 @@ img {
   fill: #ffffff;
  }
 
+.footer-social .social-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  margin: auto;
+
+  background-color: #81b3d2;
+}
+
 .footer-social li {
   margin: auto;
   margin-right: 6px;
@@ -414,6 +486,7 @@ img {
  }
 
  .footer-social .social-icon:active {
+  /*-----------------------------------------------------требует расширение зоны нажатия-------------*/
   fill: rgba(255, 255, 255, 0.3);
  }
 
