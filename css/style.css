@@ -11,7 +11,7 @@
 }
 
 body {
-  width: 100%;
+
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -295,7 +295,8 @@ li.item-feature:nth-child(3)  b::before {
 
 .item-reason-bottom p {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
+  padding: 0 65px;
 
   color: #333333;
 }
@@ -311,6 +312,7 @@ li.item-feature:nth-child(3)  b::before {
 }
 
 .service {
+  position: relative;
   width: 576px;
   margin: 0 auto;
   padding-top: 51px;
@@ -319,6 +321,9 @@ li.item-feature:nth-child(3)  b::before {
 }
 
 .service b {
+  display: block;
+  margin-bottom: 23px;
+
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -326,17 +331,23 @@ li.item-feature:nth-child(3)  b::before {
 
 .service p {
   margin: 0;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
+  padding: 0 50px;
 
   line-height: 24px;
   color: #333333;
 }
 
 .btn-service {
+  width: 568px;
+  padding: 30px 0;
+
   font: inherit;
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  word-spacing: 7px;
+  text-transform: inherit;
   color: #ffffff;
 
   background-color: #766357;
@@ -353,14 +364,72 @@ li.item-feature:nth-child(3)  b::before {
 
   background-color: #503e33;
 }
+/* модальное окно ===================================*/
+.search-hotels {
+  position: absolute;
+  left: 4px;
+
+  display: flex;
+  width: 568px;
+  min-height: 395px;
+
+  background-color: #ffffff;
+}
+
+.search-hotels-form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  margin: auto;
+  width: 458px;
+  min-height: 285px;
+}
+
+.search-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.search-field-quantity {
+  width: 50%;
+}
+
+.search-control {
+  position: relative;
+}
 
 .search-field label {
+  display: block;
+
   font-weight: bold;
   line-height: 26px;
 }
 
+.search-field-quantity label[for^= "quantity-kids"] {
+  margin-left: 50px;
+}
+
 .search-field input {
+  width: 346px;
+  margin: 0;
+  padding: 10px 0;
+  padding-left: 13px;
+  box-sizing: border-box;
+
+  font-weight: bold;
+
+  border: none;
   background-color: #f2f2f2;
+}
+
+.search-field-quantity input {
+  width: 38px;
+  padding: 11px 0;
+
+  text-align: center;
 }
 
 .search-field input:hover {
@@ -369,6 +438,18 @@ li.item-feature:nth-child(3)  b::before {
 
 .search-field input:focus {
   background-color: #ffffff;
+}
+
+.calendar-btn {
+  position: absolute;
+  right: 9px;
+  top: 7px;
+
+  margin: 0px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
 }
 
 .search-control .calendar-btn-icon {
@@ -385,13 +466,38 @@ li.item-feature:nth-child(3)  b::before {
 
 /* Место для стилей кнопок минус плюс */
 
+
+.search-field-quantity .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.search-field-quantity .btn {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: #f2f2f2;
+}
+
+
 .search-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 458px;
+  margin-top: 25px;
+
   font: inherit;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  text-transform: inherit;
   color: #ffffff;
 
+  border: none;
   background-color: #81b3d2;
 }
 
@@ -404,6 +510,7 @@ li.item-feature:nth-child(3)  b::before {
 
   background-color: #5496bd;
 }
+/* конец модального окна=========================================*/
 
 .main-map {
   width: 1200px;
@@ -411,13 +518,13 @@ li.item-feature:nth-child(3)  b::before {
 }
 
 .footer-index {
-  margin-top: -100px;
+  position: relative;
+
+  margin-top: -126px;
 }
 
 .main-footer{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 1200px;
   min-height: 120px;
 
@@ -426,27 +533,47 @@ li.item-feature:nth-child(3)  b::before {
 
 .main-footer p:nth-child(1) {
   width: 240px;
-  min-height: 60px;
-  margin: auto 0;
-}
+  margin-top: 47px;
+  margin-left: 133px;
+  margin-right: 26px;
 
-.main-footer p {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-.main-footer b {
+
+
+.main-footer p:nth-child(3) {
+  display: flex;
+}
+
+.main-footer span {
+  display: block;
+  margin: auto 0;
+  margin-top: 31px;
+  margin-right: 9px;
+  padding:0;
+
+  font-weight: normal;
+  font-size: 14px;
   line-height: 26px;
+}
+
+.main-footer .author-logo {
+  margin: auto 0;
+  margin-top: 22px;
 }
 
 .main-footer .footer-social {
   display: flex;
   width: 400px;
-  min-height: 60px;
+  margin-right: 104px;
+
 }
 
 .footer-social .social-icon {
+
   fill: #ffffff;
  }
 
