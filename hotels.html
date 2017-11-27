@@ -26,35 +26,27 @@
       <div class= "filter-container">
         <form class= "hotels-filter" id= "hotels-filter-id" method= "post" action= "http://echo.htmlacademy.ru">
           <fieldset class = "filter-checkboxs checkboxs-infrastructure">
-            <legend>Инфраструктура:</legend>
-            <label>
-              <input type="checkbox" name= "infrastructure-pool" checked>
-              Бассейн
-            </label>
-            <label>
-              <input type="checkbox" name= "infrastructure-parking">
-              Парковка
-            </label>
-            <label>
-              <input type="checkbox" name= "infrastructure-wifi">
-              WI-FI
-            </label>
+            <div class= "container">
+              <legend>Инфраструктура:</legend>
+              <input id= "infrastructure-pool-id" type="checkbox" name= "infrastructure-pool" checked>
+              <label for= "infrastructure-pool-id">Бассейн</label>
+              <input id= "infrastructure-parking-id" type="checkbox" name= "infrastructure-parking">
+              <label for= "infrastructure-parking-id">Парковка</label>
+              <input id= "infrastructure-wifi-id" type="checkbox" name= "infrastructure-wifi">
+              <label for= "infrastructure-wifi-id">WI-FI</label>
+            </div>
           </fieldset>
 
           <fieldset class = "filter-checkboxs checkboxs-housing">
-            <legend>Тип жилья:</legend>
-              <label>
-                <input type="checkbox" name= "housing-hotel" checked>
-                  Гостиница
-              </label>
-              <label>
-                <input type="checkbox" name= "housing-motel" checked>
-                  Мотель
-              </label>
-              <label>
-                <input type="checkbox" name= "housing-apartments" checked>
-                Апартаменты
-              </label>
+            <div class= "container">
+              <legend>Тип жилья:</legend>
+                <input id= "housing-hotel-id" type="checkbox" name= "housing-hotel" checked>
+                <label for= "housing-hotel-id">Гостиница</label>
+                <input id= "housing-motel-id" type="checkbox" name= "housing-motel" checked>
+                <label for= "housing-motel-id">Мотель</label>
+                <input id= "housing-apartments-id" type="checkbox" name= "housing-apartments" checked>
+                <label for= "housing-apartments-id">Апартаменты</label>
+            </div>
           </fieldset>
 
           <fieldset class= "filter-price">
