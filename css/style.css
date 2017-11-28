@@ -791,7 +791,9 @@ input[type= "checkbox"]:checked + label::before {
   line-height: 18px;
   text-transform: inherit;
   color: rgba( 0, 0, 0, 0.3);
-
+  /*
+  border: 1px dotted #81b3d2;
+  */
   background: none;
   border: none;
   border-radius: 0;
@@ -859,34 +861,47 @@ input[type= "checkbox"]:checked + label::before {
 
 .search-item .item-container {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 1056px;
   min-height: 150px;
   margin: 0 auto;
 }
 
-.search-item img {
-  /*----------Разобраться с селектором---------*/
+.item-container > img {
+  /*-----------посмотри курс про селекторы!--------*/
   width: 135px;
   min-height: 90px;
-  margin: auto 0;
+  margin: 0;
   margin-right: 30px;
 }
 
 .search-item .item-info {
-  width: 364px;
-  min-height: 90px;
-  margin: auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  width: 260px;
+  min-height: 100px;
+  margin: 0;
+  padding-bottom: 5px;
+  box-sizing: border-box;
 }
 
 .item-info h3{
   margin: 0;
-  margin-bottom: 5px;
   padding: 0;
+}
+
+.item-info .info-container {
+    width: 178px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
 }
 
 .item-info p {
   margin: 0;
-  margin-bottom: 8px;
   padding: 0;
 }
 
@@ -923,7 +938,7 @@ input[type= "checkbox"]:checked + label::before {
 .item-info .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 5px 0;
+  padding: 3px 0;
 
   text-align: center;
   font: inherit;
@@ -933,6 +948,7 @@ input[type= "checkbox"]:checked + label::before {
 
 .btn-details {
   width: 110px;
+  margin-right: 6px;
 
   background-color: #81b3d2;
 }
@@ -967,23 +983,33 @@ input[type= "checkbox"]:checked + label::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 135;
-  min-height: 90px;
-  margin: auto 0;
+  align-items: flex-end;
+  width: 130px;
+  min-height: 93px;
+  box-sizing: border-box;
+  margin: 0;
   margin-left: auto;
+  padding-bottom: 2px;
 }
 
 .item-rate .rate-star {
   display: flex;
+  justify-content: flex-end;
 }
 
 .rate-star li,
 .rate-star img {
   width: 18px;
-  min-height: 18px;
+  height: 18px;
+}
+
+.rate-star li {
+  margin-left: 6px;
 }
 
 .item-rate span {
+  padding: 3px 14px;
+
   color: #666666;
 
   background: #f2f2f2;
