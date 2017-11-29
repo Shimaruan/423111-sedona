@@ -38,13 +38,17 @@ img {
   box-shadow: 0 0 40px 2px #dbdbdb;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
+  overflow: hidden;
   position: absolute;
-  clip: rect(0 0 0 0);
-
+  margin: -1px;
+  padding: 0;
   width: 1px;
   height: 1px;
-  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
 }
 
 /*-----------index.html------------- */
@@ -464,31 +468,64 @@ li.item-feature:nth-child(3)  b::before {
   fill: #81b3d2;
 }
 
-/* Место для стилей кнопок минус плюс */
-
-
 .search-field-quantity .container {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
 }
 
 .search-field-quantity .btn {
+  position: relative;
   width: 38px;
   height: 38px;
   padding: 0;
   margin: 0;
 
   border: none;
+  border-radius: 0;
   background-color: #f2f2f2;
+
+  font-size: 0;
 }
 
+.search-field input[name^=quantity-adult],
+.search-field input[name^=quantity-kids] {
+  align-self: baseline;
+}
+/* Место для стилей кнопок минус плюс */
+
+.search-field-quantity .btn:before,
+.search-field-quantity .btn:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 14px;
+
+  width: 10px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.search-field-quantity .btn-plus:after {
+  transform: rotate(90deg);
+}
+
+.search-field-quantity .btn:hover::before,
+.search-field-quantity .btn:hover::after {
+  background-color: #000000;
+}
+
+.search-field-quantity .btn:active::before,
+.search-field-quantity .btn:active::after {
+  background-color: #81b3d2;
+}
 
 .search-btn {
   display: inline-block;
   vertical-align: top;
   width: 458px;
   margin-top: 25px;
+
 
   font: inherit;
   font-weight: bold;
@@ -523,26 +560,44 @@ li.item-feature:nth-child(3)  b::before {
   margin-top: -126px;
 }
 
-.main-footer{
+.main-footer {
   display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
   width: 1200px;
-  min-height: 120px;
+  min-height: 126px;
 
   background-color: rgba(255,255,255, 0.9);
 }
 
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+  height: 120px;
+  align-items: center;
+}
+
 .main-footer p:nth-child(1) {
   width: 240px;
-  margin-top: 47px;
-  margin-left: 133px;
-  margin-right: 26px;
+  padding: 0;
+  padding-left: 61px;
+  box-sizing: border-box;
 
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-
+.footer-copyright {
+  width: 240px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  padding-top: 10px;
+  padding-right: 23px;
+  box-sizing: border-box;
+}
 
 .main-footer p:nth-child(3) {
   display: flex;
@@ -550,30 +605,20 @@ li.item-feature:nth-child(3)  b::before {
 
 .main-footer span {
   display: block;
-  margin: auto 0;
-  margin-top: 31px;
-  margin-right: 9px;
-  padding:0;
+  padding: 0;
+  padding-bottom: 13px;
 
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
 }
 
-.main-footer .author-logo {
-  margin: auto 0;
-  margin-top: 22px;
-}
-
 .main-footer .footer-social {
   display: flex;
   width: 400px;
-  margin-right: 104px;
-
 }
 
 .footer-social .social-icon {
-
   fill: #ffffff;
  }
 
@@ -614,10 +659,6 @@ li.item-feature:nth-child(3)  b::before {
   /*-----------------------------------------------------требует расширение зоны нажатия-------------*/
   fill: rgba(255, 255, 255, 0.3);
  }
-
-.footer-copyright {
-  width: 241px;
-}
 
  .academy-icon {
   fill: #231f20;
@@ -685,18 +726,20 @@ li.item-feature:nth-child(3)  b::before {
   padding-bottom: 2px;
 }
 
-.filter-container label {
-  display: block;
+.filter-checkboxs label {
+  display: flex;
+  align-items: center;
+  width: 150px;
 
   color: #ffffff;
 }
 
-.filter-container label::before {
+.filter-checkboxs label::before {
   content: "";
 
   display: inline-block;
   width: 28px;
-  height: 27px;
+  height: 25px;
   margin: 0;
   margin-right: 13px;
   padding: 0;
@@ -721,16 +764,163 @@ input[type= "checkbox"]:checked + label::before {
   background-color: #6a6a6a;
 }
 
+/*--------Ползунок цены-------------------------------------------*/
+
 .hotels-filter .filter-price {
   width: 328px;
   min-height: 167px;
   margin: 0;
+  margin-left: auto;
   padding: 0;
 }
 
-.filter-btn {
-  font: inherit;
+.filter-range {
+  display: flex;
+  flex-wrap: wrap;
+  width: 328px;
+  min-height: 159px;
+}
+
+.filter-range .filter-range-title {
+  margin: 0;
+  margin-left: 12px;
+  margin-bottom: -4px;
+  padding-top: 3px;
+  box-sizing: border-box;
+
+  letter-spacing: 1px;
+  font-weight: bold;
   color: #ffffff;
+}
+
+.filter-price .price-controls {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 314px;
+  min-height: 32px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.filter-price .container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65px;
+  box-sizing: border-box;
+  padding-bottom: 7px;
+  width: 328px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 57px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: #ffffff;
+
+  border: none;
+
+  background-color: transparent;
+}
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  width: 318px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle{
+  position: absolute;
+  top: -9px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  width: 6px;
+  height: 6px;
+}
+
+/*---------------------------------------------------*/
+
+.filter-price .filter-btn {
+  display: inline-block;
+  width: 137px;
+  min-height: 36px;
+  margin: 0 auto;
+  align-self: flex-end;
+
+  font: inherit;
+  text-transform: inherit;
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
 }
 
 .sort {
@@ -767,6 +957,8 @@ input[type= "checkbox"]:checked + label::before {
   display: flex;
   width: 500px;
   min-height: 20px;
+  padding-top: 3px;
+  box-sizing: border-box;
 }
 
 .sort-properties li:nth-child(1){
@@ -815,6 +1007,8 @@ input[type= "checkbox"]:checked + label::before {
   display: flex;
   justify-content: space-between;
   width: 35px;
+  padding-top: 3px;
+  box-sizing: border-box;
 
   margin-left: auto;
 }
