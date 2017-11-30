@@ -357,6 +357,7 @@ li.item-feature:nth-child(3)  b::before {
   background-color: #766357;
   border: none;
   border-radius: 0;
+  cursor: pointer;
 }
 
 .btn-service:hover {
@@ -452,8 +453,10 @@ li.item-feature:nth-child(3)  b::before {
   margin: 0px;
   padding: 0;
 
-  background-color: transparent;
   border: none;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .search-control .calendar-btn-icon {
@@ -483,6 +486,7 @@ li.item-feature:nth-child(3)  b::before {
   border: none;
   border-radius: 0;
   background-color: #f2f2f2;
+  cursor: pointer;
 
   font-size: 0;
 }
@@ -535,7 +539,9 @@ li.item-feature:nth-child(3)  b::before {
   color: #ffffff;
 
   border: none;
+  border-radius: 0;
   background-color: #81b3d2;
+  cursor: pointer;
 }
 
 .search-btn:hover {
@@ -554,10 +560,14 @@ li.item-feature:nth-child(3)  b::before {
   min-height: 593px;
 }
 
+.main-map img {
+  display: block;
+}
+
 .footer-index {
   position: relative;
 
-  margin-top: -126px;
+  margin-top: -122px;
 }
 
 .main-footer {
@@ -565,7 +575,7 @@ li.item-feature:nth-child(3)  b::before {
   justify-content: space-around;
   align-items: flex-start;
   width: 1200px;
-  min-height: 126px;
+  min-height: 122px;
 
   background-color: rgba(255,255,255, 0.9);
 }
@@ -574,7 +584,7 @@ li.item-feature:nth-child(3)  b::before {
   display: flex;
   justify-content: space-between;
   width: 1056px;
-  height: 120px;
+  height: 122px;
   align-items: center;
 }
 
@@ -732,6 +742,8 @@ li.item-feature:nth-child(3)  b::before {
   width: 150px;
 
   color: #ffffff;
+
+  cursor: pointer;
 }
 
 .filter-checkboxs label::before {
@@ -905,8 +917,6 @@ input[type= "checkbox"]:checked + label::before {
   height: 6px;
 }
 
-/*---------------------------------------------------*/
-
 .filter-price .filter-btn {
   display: inline-block;
   width: 137px;
@@ -921,7 +931,16 @@ input[type= "checkbox"]:checked + label::before {
   border: 2px solid #ffffff;
   border-radius: 2px;
   background-color: transparent;
+  cursor: pointer;
 }
+
+.filter-price .filter-btn:hover {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/*---------------------------------------------------*/
 
 .sort {
   display: flex;
@@ -966,7 +985,20 @@ input[type= "checkbox"]:checked + label::before {
 }
 
 .sort-properties li {
+  position: relative;
+
   margin-right: 33px;
+}
+
+.sort-properties .sort-btn:not(.current)::before {
+  content: "";
+
+  position: absolute;
+  bottom: 2px;
+
+  width: 100%;
+
+  border-bottom: 1px dotted #81b3d2;
 }
 
 .sort-properties span {
@@ -986,9 +1018,10 @@ input[type= "checkbox"]:checked + label::before {
   /*
   border: 1px dotted #81b3d2;
   */
-  background: none;
   border: none;
   border-radius: 0;
+  background: none;
+  cursor: pointer;
 }
 
 .sort-properties .sort-btn.current {
@@ -1009,7 +1042,6 @@ input[type= "checkbox"]:checked + label::before {
   width: 35px;
   padding-top: 3px;
   box-sizing: border-box;
-
   margin-left: auto;
 }
 
@@ -1017,9 +1049,10 @@ input[type= "checkbox"]:checked + label::before {
   padding: 0;
   margin: 0;
 
-  background: none;
   border: none;
   border-radius: 0;
+  background: none;
+  cursor: pointer;
 }
 
 .sort-arrows .arrows-btn-icon {
@@ -1101,14 +1134,6 @@ input[type= "checkbox"]:checked + label::before {
 
 .search-item a{
   color: #000000;
-}
-
-.search-item a:hover {
-  color: #81b3d2;
-}
-
-.search-item a:active {
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-item h3 {
