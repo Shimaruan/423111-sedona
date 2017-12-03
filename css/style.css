@@ -126,6 +126,10 @@ img {
   color: #81b3d2;
 }
 
+.site-navigation .current:hover {
+  color: #766357;
+}
+
 .site-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -245,6 +249,8 @@ img {
   width: 400px;
   min-height: 330px;
   text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 25px;
 }
 
 .item-feature b {
@@ -267,7 +273,6 @@ img {
 
   width: 75px;
   height: 75px;
-
 
   background-image: url(../img/icon-1.svg);
   background-repeat: no-repeat;
@@ -301,6 +306,9 @@ li.item-feature:nth-child(3) b::before {
   min-height: 256px;
 
   text-align: center;
+
+  box-sizing: border-box;
+  padding-bottom: 25px;
 }
 
 .item-reason-bottom h2{
@@ -618,9 +626,14 @@ li.item-feature:nth-child(3) b::before {
   width: 1200px;
   min-height: 593px;
 
+  background-color: #cbdda9;
   background-image: url("../img/map-picture.jpg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.main-map iframe {
+  frameborder: 0;
 }
 
 .footer-index {
@@ -748,7 +761,6 @@ li.item-feature:nth-child(3) b::before {
  }
 
  .social-btn:active .social-icon {
-
   fill: rgba(255, 255, 255, 0.3);
  }
 
@@ -773,14 +785,12 @@ li.item-feature:nth-child(3) b::before {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: flex-start;
   width: 1056px;
-  /*min-height: 217px;*/
   margin: 0 auto;
   padding: 25px 0;
   box-sizing: border-box;
+
 }
 
 .filter-container {
@@ -789,6 +799,8 @@ li.item-feature:nth-child(3) b::before {
 
   background-color: #81b3d2;
   background-image: url(../img/filter-hotel-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hotels-filter fieldset {
@@ -1242,9 +1254,6 @@ input[type="checkbox"]:disabled:checked + label::before {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 1200px;
-  /*
-  min-height: 452px;
-  */
   margin: 0 auto;
   padding: 0;
 }
@@ -1260,15 +1269,14 @@ input[type="checkbox"]:disabled:checked + label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 1056px;
-  height: 150px;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 25px
 }
 
 .item-container > img {
