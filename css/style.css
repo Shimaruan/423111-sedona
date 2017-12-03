@@ -93,7 +93,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   min-height: 56px;
   margin: auto;
@@ -709,6 +711,8 @@ li.item-feature:nth-child(3)  b::before {
  }
 
 .footer-social .social-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 46px;
   height: 48px;
@@ -794,15 +798,15 @@ li.item-feature:nth-child(3)  b::before {
 }
 
 .hotels-filter .checkboxs-infrastructure {
-  width: 240px;
-  height: 167px;
+  width: 255px;
+  height: 160px;
   margin: 0;
   padding: 0;
 }
 
 .hotels-filter .checkboxs-housing {
   width: 255px;
-  min-height: 165px;
+  height: 160px;
   margin: 0;
   padding: 0;
 }
@@ -867,11 +871,32 @@ input[type= "checkbox"]:checked + label::before {
 }
 
 .filter-checkboxs input[type= "checkbox"] {
-  display: none;
+  opacity: 0;
 }
 
-.hotels-filter input[type= "checkbox"]:disabled{
-  background-color: #6a6a6a;
+.checkbox:focus + label:before {
+  -webkit-filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+          filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+.checkbox:focus + label:before {
+  -webkit-box-shadow: 0px 0px 10px rgb(255, 255, 255);
+          box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+}
+
+input[type="checkbox"]:disabled + label::before {
+  background-image: url(../img/checkbox-off-dis.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+input[type="checkbox"]:disabled:checked + label::before {
+  background-image: url(../img/checkbox-on-dis.svg);
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 /*--------Ползунок цены-------------------------------------------*/
@@ -1410,6 +1435,15 @@ input[type= "checkbox"]:checked + label::before {
 }
 
 /* Анимация */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1421,5 +1455,6 @@ input[type= "checkbox"]:checked + label::before {
 }
 
 .fadeIn {
-  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
 }

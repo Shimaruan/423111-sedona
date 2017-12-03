@@ -25,29 +25,29 @@
       <h1 class= "visually-hidden">Поиск гостиниц</h1>
       <div class= "filter-container">
         <form class= "hotels-filter" id= "hotels-filter-id" method= "post" action= "http://echo.htmlacademy.ru">
+          <div class= "container">
           <fieldset class = "filter-checkboxs checkboxs-infrastructure">
-            <div class= "container">
               <legend>Инфраструктура:</legend>
-                <input  id= "infrastructure-pool-id" type= "checkbox" name= "infrastructure-pool" checked>
-                <label for= "infrastructure-pool-id" tabindex= "0">Бассейн</label>
-                <input id= "infrastructure-parking-id" type= "checkbox" name= "infrastructure-parking">
-                <label for= "infrastructure-parking-id" tabindex= "0">Парковка</label>
-                <input id= "infrastructure-wifi-id" type= "checkbox" name= "infrastructure-wifi">
-                <label for= "infrastructure-wifi-id" tabindex= "0">WI-FI</label>
-            </div>
+                <input class= "checkbox" id= "infrastructure-pool-id" type= "checkbox" name= "infrastructure-pool" checked>
+                <label for= "infrastructure-pool-id">Бассейн</label>
+                <input class= "checkbox" id= "infrastructure-parking-id" type= "checkbox" name= "infrastructure-parking">
+                <label for= "infrastructure-parking-id">Парковка</label>
+                <input class= "checkbox" id= "infrastructure-wifi-id" type= "checkbox" name= "infrastructure-wifi">
+                <label for= "infrastructure-wifi-id">WI-FI</label>
           </fieldset>
+          </div>
 
+          <div class= "container">
           <fieldset class = "filter-checkboxs checkboxs-housing">
-            <div class= "container">
               <legend>Тип жилья:</legend>
-                  <input id= "housing-hotel-id" type= "checkbox" name= "housing-hotel" checked>
-                  <label for= "housing-hotel-id" tabindex= "0">Гостиница</label>
-                  <input id= "housing-motel-id" type= "checkbox" name= "housing-motel" checked>
-                  <label for= "housing-motel-id" tabindex= "0"> Мотель</label>
-                  <input id= "housing-apartments-id" type= "checkbox" name= "housing-apartments" checked>
-                  <label for= "housing-apartments-id" tabindex= "0">Апартаменты</label>
-            </div>
+                  <input class= "checkbox" id= "housing-hotel-id" type= "checkbox" name= "housing-hotel" checked>
+                  <label for= "housing-hotel-id">Гостиница</label>
+                  <input class= "checkbox" id= "housing-motel-id" type= "checkbox" name= "housing-motel" checked>
+                  <label for= "housing-motel-id"> Мотель</label>
+                  <input class= "checkbox" id= "housing-apartments-id" type= "checkbox" name= "housing-apartments" checked>
+                  <label for= "housing-apartments-id">Апартаменты</label>
           </fieldset>
+          </div>
 
           <fieldset class= "filter-price">
               <div class="filter-range">
@@ -100,7 +100,7 @@
         </section>
 
         <div class= "sort-found">
-          <figure class= "search-item">
+          <div class= "search-item">
             <div class= "item-container">
               <img src= "img/amarata-small.jpg" alt= "фото гостиницы" width= "135" height= "90">
               <div class= "item-info">
@@ -129,9 +129,9 @@
                 <span>Рейтинг: 8,5</span>
               </div>
             </div>
-          </figure>
+          </div>
 
-          <figure class= "search-item">
+          <div class= "search-item">
             <div class= "item-container">
               <img src= "img/quail-small.jpg" alt= "фото мотеля" width= "135" height= "90">
               <div class= "item-info">
@@ -157,9 +157,9 @@
                 <span>Рейтинг: 8,9</span>
               </div>
             </div>
-          </figure>
+          </div>
 
-          <figure class= "search-item">
+          <div class= "search-item">
             <div class= "item-container">
               <img src= "img/pocco-small.jpg" alt= "фото аппартаментов" width= "135" height= "90">
               <div class= "item-info">
@@ -182,7 +182,7 @@
                 <span>Рейтинг: 9,2</span>
               </div>
             </div>
-            </figure>
+            </div>
           </div>
       </main>
 
