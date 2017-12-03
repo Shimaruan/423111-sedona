@@ -400,6 +400,9 @@ li.item-feature:nth-child(3)  b::before {
   padding: 55px;
 
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
+  -moz-box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
+  box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
 }
 
 .search-hotels-form {
