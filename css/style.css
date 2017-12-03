@@ -207,7 +207,6 @@ img {
   display: block;
 }
 
-
 .reason-description h2,
 .item-reason h2{
   margin: 0;
@@ -249,7 +248,8 @@ img {
   width: 400px;
   min-height: 330px;
   text-align: center;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 25px;
 }
 
@@ -307,7 +307,8 @@ li.item-feature:nth-child(3) b::before {
 
   text-align: center;
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 25px;
 }
 
@@ -436,7 +437,6 @@ li.item-feature:nth-child(3) b::before {
   display: flex;
 
   -webkit-animation-name: slideInDown;
-
           animation-name: slideInDown;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -785,11 +785,14 @@ li.item-feature:nth-child(3) b::before {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 1056px;
   margin: 0 auto;
   padding: 25px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
 }
 
@@ -818,7 +821,8 @@ li.item-feature:nth-child(3) b::before {
   margin: 0;
   padding: 0;
   padding-top: 4px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .hotels-filter .checkboxs-housing {
@@ -827,7 +831,8 @@ li.item-feature:nth-child(3) b::before {
   margin: 0;
   padding: 0;
   padding-top: 4px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .filter-checkboxs .container {
@@ -1273,13 +1278,16 @@ input[type="checkbox"]:disabled:checked + label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 1056px;
   margin: 0 auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 25px
 }
 
