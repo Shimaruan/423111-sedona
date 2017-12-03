@@ -11,8 +11,6 @@
 }
 
 body {
-
-
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -28,6 +26,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
@@ -83,9 +82,7 @@ img {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
 }
 
@@ -96,14 +93,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   min-height: 56px;
   margin: auto;
 
   background-color: #ffffff;
-
-
-
 }
 
 .site-navigation li {
@@ -138,7 +134,7 @@ img {
   width: 1200px;
   height: 508px;
 
-  background-color: #81b3d2 ;
+  background-color: #81b3d2;
   background-image:url(../img/intro-bg-fonts.png), url(../img/intro-bg-bottomline.png), url(../img/intro-bg.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center 76px, bottom, bottom;
@@ -172,7 +168,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
+  -ms--ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
@@ -180,7 +178,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
+  -ms--ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
   background-color: #81b3d2;
@@ -189,6 +189,7 @@ img {
 .item-reason .reason-description {
   width: 400px;
   min-height: 256px;
+  text-align: center;
 
   background-color: #81b3d2;
 }
@@ -202,9 +203,6 @@ img {
   display: block;
 }
 
-.reason-description {
-  text-align: center;
-}
 
 .reason-description h2,
 .item-reason h2{
@@ -212,7 +210,6 @@ img {
   margin-top: 47px;
   margin-bottom: 24px;
   padding: 0 100px;
-
 
   font-weight: bold;
   font-size: 21px;
@@ -237,6 +234,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   background-color: #ffffff;
 }
@@ -261,7 +260,7 @@ img {
 }
 
 .item-feature b::before {
-  content: " ";
+  content: "";
   position: absolute;
   top: -103px;
   left: 162px;
@@ -275,7 +274,7 @@ img {
   background-position: center;
 }
 
-li.item-feature:nth-child(2)  b::before {
+li.item-feature:nth-child(2) b::before {
   left: 160px;
 
   background-image: url(../img/icon-3.svg);
@@ -283,7 +282,7 @@ li.item-feature:nth-child(2)  b::before {
   background-position: center;
 }
 
-li.item-feature:nth-child(3)  b::before {
+li.item-feature:nth-child(3) b::before {
   background-image: url(../img/icon-2.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -336,6 +335,7 @@ li.item-feature:nth-child(3)  b::before {
 
 .service {
   position: relative;
+
   width: 576px;
   margin: 0 auto;
   padding-top: 51px;
@@ -387,7 +387,9 @@ li.item-feature:nth-child(3)  b::before {
 
   background-color: #503e33;
 }
-/* модальное окно ===================================*/
+
+/* Начало модального окна-------------------------------------*/
+
 .search-hotels {
   position: absolute;
   left: 4px;
@@ -401,7 +403,6 @@ li.item-feature:nth-child(3)  b::before {
 
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
-  -moz-box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
   box-shadow: 0px 6px 21px 0px rgba(176,173,176,1);
 }
 
@@ -411,7 +412,9 @@ li.item-feature:nth-child(3)  b::before {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: wrap;
+  -ms--ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
   margin: auto;
@@ -419,15 +422,14 @@ li.item-feature:nth-child(3)  b::before {
   min-height: 285px;
 }
 
-
 .modal-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-animation-name: fadeIn;
+  -webkit-animation-name: slideInDown;
 
-          animation-name: fadeIn;
+          animation-name: slideInDown;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
@@ -588,7 +590,6 @@ li.item-feature:nth-child(3)  b::before {
   width: 100%;
   margin-top: 25px;
 
-
   font: inherit;
   font-weight: bold;
   font-size: 21px;
@@ -611,7 +612,7 @@ li.item-feature:nth-child(3)  b::before {
 
   background-color: #5496bd;
 }
-/* конец модального окна=========================================*/
+/* конец модального окна----------------------------------------------------*/
 
 .main-map {
   width: 1200px;
@@ -751,8 +752,6 @@ li.item-feature:nth-child(3)  b::before {
   fill: rgba(255, 255, 255, 0.3);
  }
 
-
-
  .academy-icon {
   fill: #231f20;
 }
@@ -778,8 +777,10 @@ li.item-feature:nth-child(3)  b::before {
       -ms-flex-align: center;
           align-items: center;
   width: 1056px;
-  height: 217px;
+  /*min-height: 217px;*/
   margin: 0 auto;
+  padding: 25px 0;
+  box-sizing: border-box;
 }
 
 .filter-container {
@@ -802,7 +803,6 @@ li.item-feature:nth-child(3)  b::before {
 
 .hotels-filter .checkboxs-infrastructure {
   width: 255px;
-  height: 160px;
   margin: 0;
   padding: 0;
 }
@@ -837,9 +837,7 @@ li.item-feature:nth-child(3)  b::before {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -855,12 +853,12 @@ li.item-feature:nth-child(3)  b::before {
   content: "";
 
   display: inline-block;
+  vertical-align: middle;
   width: 28px;
   height: 25px;
   margin: 0;
   margin-right: 13px;
   padding: 0;
-  vertical-align: middle;
 
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
@@ -882,13 +880,15 @@ input[type= "checkbox"]:checked + label::before {
           filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
 }
 
+/* Стили для Ie11 начало------------------------------------------------------------*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
 .checkbox:focus + label:before {
-  -webkit-box-shadow: 0px 0px 10px rgb(255, 255, 255);
-          box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  -webkit-box-shadow: -3px 1px 3px rgb(255, 255, 255);
+          box-shadow: -3px 1px 3px rgb(255, 255, 255);
 }
 }
+/* Стили для Ie11 конец-------------------------------------------------------------*/
 
 input[type="checkbox"]:disabled + label::before {
   background-image: url(../img/checkbox-off-dis.svg);
@@ -902,8 +902,7 @@ input[type="checkbox"]:disabled:checked + label::before {
   background-position: left;
 }
 
-/*--------Ползунок цены-------------------------------------------*/
-
+/*--------Блок с ползунком цены-начало-------------------------------------------*/
 .hotels-filter .filter-price {
   width: 328px;
   min-height: 167px;
@@ -916,7 +915,9 @@ input[type="checkbox"]:disabled:checked + label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
+  -ms--ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 328px;
   height: 159px;
@@ -939,15 +940,13 @@ input[type="checkbox"]:disabled:checked + label::before {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 314px;
-  min-height: 32px;
+  height: 32px;
 
   font-size: 0;
 
@@ -1020,7 +1019,6 @@ input[type="checkbox"]:disabled:checked + label::before {
   color: #ffffff;
 
   border: none;
-
   background-color: transparent;
 }
 
@@ -1068,6 +1066,7 @@ input[type="checkbox"]:disabled:checked + label::before {
 
 .filter-price .filter-btn {
   display: inline-block;
+  vertical-align: top;
   width: 137px;
   min-height: 36px;
   margin: 0 auto;
@@ -1090,7 +1089,7 @@ input[type="checkbox"]:disabled:checked + label::before {
   background-color: #ffffff;
 }
 
-/*---------------------------------------------------*/
+/*----------Блок цены с ползунком-конец----------------------------------------*/
 
 .sort {
   display: -webkit-box;
@@ -1177,9 +1176,6 @@ input[type="checkbox"]:disabled:checked + label::before {
   line-height: 18px;
   text-transform: inherit;
   color: rgba( 0, 0, 0, 0.3);
-  /*
-  border: 1px dotted #81b3d2;
-  */
   border: none;
   border-radius: 0;
   background: none;
@@ -1246,7 +1242,9 @@ input[type="checkbox"]:disabled:checked + label::before {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 1200px;
+  /*
   min-height: 452px;
+  */
   margin: 0 auto;
   padding: 0;
 }
@@ -1269,12 +1267,11 @@ input[type="checkbox"]:disabled:checked + label::before {
       -ms-flex-align: center;
           align-items: center;
   width: 1056px;
-  min-height: 150px;
+  height: 150px;
   margin: 0 auto;
 }
 
 .item-container > img {
-  /*-----------посмотри курс про селекторы!--------*/
   width: 135px;
   min-height: 90px;
   margin: 0;
@@ -1285,7 +1282,9 @@ input[type="checkbox"]:disabled:checked + label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
+  -ms--ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -1438,26 +1437,27 @@ input[type="checkbox"]:disabled:checked + label::before {
 }
 
 /* Анимация */
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes slideInDown {
   from {
-    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
 
   to {
-    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
-@keyframes fadeIn {
+@keyframes slideInDown {
   from {
-    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
 
   to {
-    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
 }
