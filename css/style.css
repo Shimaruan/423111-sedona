@@ -817,6 +817,8 @@ li.item-feature:nth-child(3) b::before {
   width: 255px;
   margin: 0;
   padding: 0;
+  padding-top: 4px;
+  box-sizing: border-box;
 }
 
 .hotels-filter .checkboxs-housing {
@@ -824,6 +826,8 @@ li.item-feature:nth-child(3) b::before {
   height: 160px;
   margin: 0;
   padding: 0;
+  padding-top: 4px;
+  box-sizing: border-box;
 }
 
 .filter-checkboxs .container {
@@ -1284,6 +1288,7 @@ input[type="checkbox"]:disabled:checked + label::before {
   min-height: 90px;
   margin: 0;
   margin-right: 30px;
+  padding-top: 5px;
 }
 
 .search-item .item-info {
@@ -1414,7 +1419,8 @@ input[type="checkbox"]:disabled:checked + label::before {
           box-sizing: border-box;
   margin: 0;
   margin-left: auto;
-  padding-bottom: 2px;
+  padding-top: 2px;
+  box-sizing: border-box;
 }
 
 .item-rate .rate-star {
