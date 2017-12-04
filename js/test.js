@@ -5,6 +5,7 @@ var arrivalDate= modal.querySelector("[name= arrival-date]");
 var departureDate= modal.querySelector("[name= departure-date]");
 var quantityAdult= modal.querySelector("[name= quantity-adult]");
 var quantityKids= modal.querySelector("[name= quantity-kids]");
+
 modal.classList.remove("modal-show");
 modalButton.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -18,3 +19,5 @@ form.addEventListener("submit", function (evt) {
     modal.classList.add("modal-error");
     }
 });
+
+
