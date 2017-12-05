@@ -194,6 +194,9 @@ img {
   width: 400px;
   min-height: 256px;
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 25px;
 
   background-color: #81b3d2;
 }
@@ -448,23 +451,6 @@ li.item-feature:nth-child(3) b::before {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
-
-.modal-error::before {
-  content: "Каждое поле обязательно для заполнения";
-
-  position: absolute;
-  top: 10px;
-  left: 0;
-
-  width: 318px;
-  height: 21px;
-
-  font: inherit;
-  color: #000000;
-
-  background-color: #f2f2f2;
-}
-
 
 .search-field {
   display: -webkit-box;
